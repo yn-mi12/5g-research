@@ -1,0 +1,19 @@
+config:
+  service: |
+    [SERVICE]
+        Flush         1
+        Log_Level     info
+        Daemon        off
+
+  inputs: |
+    [INPUT]
+        Name           tail
+        Path           /var/log/pods/open5gs_*.log
+        Tag            open5gs.*
+        Refresh_Interval 5
+        Mem_Buf_Limit    50MB
+
+  outputs: |
+    [OUTPUT]
+        Name           stdout
+        Match          open5gs.*
