@@ -1,8 +1,0 @@
-resources:
-- ue-deployment.yaml
-
-configMapGenerator:
-  - name: ue9-configmap
-    files:
-      - ue9.yaml
-      - wrapper.sh

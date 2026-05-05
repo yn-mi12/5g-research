@@ -92,24 +92,14 @@ set_wrapper_cmd() {
         tr -d '\r' < "$file" > "${file}.unix" && mv "${file}.unix" "$file"
     fi
 
-    awk -v desired="$cmd" '
-        BEGIN{done=0}
-        {
-            if (!done && $0 ~ /nr-ue([[:space:]]|$)/) {
-                match($0, /^([[:space:]]*)/, m); indent = (m[1] ? m[1] : "")
-                print indent desired
-                done=1
-            } else {
-                print
-            }
-        }
-        END{ if (!done) exit 42 }
-    ' "$file" > "${file}.tmp" || {
-        rm -f "${file}.tmp"
-        print_error "Could not locate an 'nr-ue' invocation in ${file}"
-        exit 1
-    }
-    mv "${file}.tmp" "$file"
+    sed -i "s|.*nr-ue -c /ueransim/config/${ue_name}.yaml.*|$cmd|" "$file"
+
+    if [ $? -eq 0 ]; then
+        print_success "Successfully patched ${file}"
+    else
+        die "Could not locate an 'nr-ue' invocation in ${file}"
+    fi
+    
     chmod +x "$file" || true
 }
 

@@ -1,12 +1,16 @@
 #!/bin/bash
 
-START_TIME=$(date -u -d '5 minutes ago' +"%Y-%m-%dT%H:%M:%SZ")
+SUFFIX=$1
 
-mkdir -p data/baseline
+OUTPUT_FILE="data/baseline/raw_${SUFFIX}.log"
 
-# Clear the previous file
-> data/baseline/baseline_raw.log
+# Clear the file if it exists
+> $OUTPUT_FILE
 
-for pod in $(kubectl get pods -n open5gs -o name); do
-    kubectl logs $pod -n open5gs --since-time=$START_TIME >> data/baseline/baseline_raw.log 2>/dev/null
+PODS=$(kubectl get pods -n open5gs -o name | cut -d'/' -f2)
+
+for POD in $PODS; do
+    kubectl logs -n open5gs $POD --tail=1000 >> $OUTPUT_FILE
 done
+
+echo "Collection complete: $(du -sh $OUTPUT_FILE)"
