@@ -3,6 +3,7 @@
 SUFFIX=$1
 
 OUTPUT_FILE="data/baseline/raw_${SUFFIX}.log"
+mkdir -p data/baseline
 
 # Clear the file if it exists
 > $OUTPUT_FILE
