@@ -9,13 +9,10 @@ fi
 RESEARCH_DIR="$HOME/5g-research"
 BASE_DIR="$RESEARCH_DIR/open5gs-k8s"
 SCRIPT_DIR="$RESEARCH_DIR/scripts"
-DATA_DIR="$RESEARCH_DIR/data/baseline"
 
 TOTAL_UES=$1
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 LOG_TAG="${TOTAL_UES}ue_${TIMESTAMP}"
-
-mkdir -p data/baseline
 
 echo "[1/3] Configuring Environment..."
 cd "$BASE_DIR"
@@ -48,6 +45,6 @@ chmod +x ./run_variable_workload.sh
 echo "Traffic is running. Collecting data for 30 seconds..."
 sleep 30
 
-echo "[3/3] Saving Logs to $DATA_DIR/raw_${LOG_TAG}.log"
+echo "[3/3] Saving logs..."
 chmod +x ./collect_baseline.sh
 ./collect_baseline.sh $LOG_TAG

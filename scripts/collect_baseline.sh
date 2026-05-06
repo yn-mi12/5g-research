@@ -2,11 +2,14 @@
 
 SUFFIX=$1
 
-OUTPUT_FILE="data/baseline/raw_${SUFFIX}.log"
-mkdir -p data/baseline
+RESEARCH_DIR="$HOME/5g-research"
+DATA_DIR="$RESEARCH_DIR/data/baseline"
+
+OUTPUT_FILE="$DATA_DIR/raw_${SUFFIX}.log"
+mkdir -p "$DATA_DIR"
 
 # Clear the file if it exists
-> $OUTPUT_FILE
+>$OUTPUT_FILE
 
 PODS=$(kubectl get pods -n open5gs -o name | cut -d'/' -f2)
 
