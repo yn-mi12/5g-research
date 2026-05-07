@@ -1,0 +1,91 @@
+[0]
+{"t":{"$date":"2026-05-07T10:<*>:<*>:00"},"s":"I",  "c":"NETWORK",  "id":<*>,   "ctx":<*>,"msg":"Connection <*>,"attr":{"remote":"127.0.0.1:<*>,"uuid":<*>,"connectionId":<*>,"connectionCount":<*>
+[1]
+Shell"},"driver":{"name":"MongoDB Internal Client","version":"5.0.32"},"os":{"type":"Linux","name":"Ubuntu","architecture":"x86_64","version":"20.04"}}}}
+[2]
+WT_SESSION.checkpoint: [WT_VERB_CHECKPOINT_PROGRESS] saving checkpoint snapshot min: <*>, snapshot max: <*> snapshot count: <*>, oldest timestamp: (0, 0) , meta checkpoint timestamp: (0, 0) base write gen: 250"}}
+[3]
+c","version":"4.17.0"},"os":{"type":"Linux","name":"Linux","architecture":"x86_64","version":"6.8.0-1052-azure"},"platform":"CPython 3.10.12.final.0"}}}
+[4]
+<*> (../src/amf/ngap-handler.c:1699)
+[5]
+(../src/amf/ngap-handler.c:<*>
+[6]
+Number of gNB-UEs is now <*> (../src/amf/context.c:<*>
+[7]
+Number of AMF-UEs is now <*> (../src/amf/context.c:<*>
+[8]
+<*> TAC[1] CellID[0x10] (../src/amf/ngap-handler.c:562)
+[9]
+known UE by SUCI (../src/amf/context.c:1833)
+[10]
+request (../src/amf/gmm-sm.c:<*>
+[11]
+SUCI (../src/amf/gmm-handler.c:166)
+[12]
+Context Release [Action:<*> (../src/amf/ngap-handler.c:1698)
+[13]
+Registration complete (../src/amf/gmm-sm.c:2146)
+[14]
+Configuration update command (../src/amf/nas-path.c:612)
+[15]
+[2026-05-07T10:<*>:<*> Timezone[0]/DST[0] (../src/amf/gmm-build.c:<*>
+[16]
+UE by 5G-S_TMSI[AMF_ID:0x20040,M_TMSI:<*> <*>:<*>
+[17]
+Handling service request failed [Not registered] (../src/amf/gmm-sm.c:1286)
+[18]
+Release SM context [204] (../src/amf/amf-sm.c:491)
+[21]
+Release SM Context [state:31] (../src/amf/nsmf-handler.c:1027)
+[22]
+Number of AMF-Sessions is now <*> (../src/amf/context.c:<*>
+[23]
+SUPI[imsi-001010000000001] DNN[internet] S_NSSAI[SST:<*> SD:0x1] smContextRef [NULL] (../src/amf/gmm-handler.c:1241)
+[24]
+Instance [259e4104-49f1-41f1-a470-03b5cccc0749] (../src/amf/gmm-handler.c:1280)
+[25]
+/nsmf-pdusession/v1/sm-contexts/{smContextRef}/modify (../src/amf/nsmf-handler.c:837)
+[26]
+EndPoint(fqdn) updated [amf-namf:0] (../src/pcf/npcf-handler.c:113)
+[28]
+Number of SMF-UEs is now <*> (../src/smf/context.c:<*>
+[29]
+Number of SMF-Sessions is now <*> (../src/smf/context.c:<*>
+[30]
+SUPI[imsi-001010000000001] DNN[internet] <*> IPv6[] (../src/smf/npcf-handler.c:539)
+[31]
+Session: UE IMSI:<*> DNN:<*>:1] IPv4:<*> IPv6:[] (../src/smf/context.c:1672)
+[32]
+SUPI[imsi-001010000000002] DNN[streaming] <*> IPv6[] (../src/smf/npcf-handler.c:539)
+[33]
+Send Error Indication [TEID:<*> to [10.10.3.231] (../src/upf/gtp-path.c:414)
+[34]
+Number of UPF-Sessions is now <*> (../src/upf/context.c:208)
+[35]
+F-SEID[UP:<*> CP:<*> <*> PDN-Type[1] <*> IPv6[] (../src/upf/context.c:485)
+[36]
+Number of UPF-sessions is now <*> (../src/upf/context.c:252)
+[37]
+to decode RLS message
+[38]
+new signal detected
+[39]
+Setup for <*>
+[40]
+NAS message received from <*>
+[41]
+Context Release Command received
+[42]
+RRC connection for <*>
+[43]
+Context Setup Request received
+[44]
+session resource(s) setup for <*> count[1]
+[45]
+<*> not found on GTP-U Downlink
+[46]
+switches to state <*>
+[47]
+access attempt is allowed for identity[0], category[MO_sig]
+[49]
